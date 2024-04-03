@@ -111,14 +111,14 @@ class globus (
   Boolean $public = true,
   # node setup
   Array[Stdlib::Port, 2, 2] $incoming_port_range = [50000, 51000],
-  String[1] $quickstart_name = "node-1"
   Optional[Array[Stdlib::Port, 2, 2]] $outgoing_port_range = undef,
   Optional[Stdlib::IP::Address] $ip_address = undef,
   Optional[Stdlib::Absolutepath] $export_node = undef,
   Optional[Stdlib::Absolutepath] $import_node = undef,
   # oicd setup
   Optional[Array[String]] $globus_user_id = undef,
-  Array[String] accepted_domain = [],
+  String[1] $quickstart_name = "node-1",
+  Array[String] $accepted_domains = [],
   # Collection setup
   Optional[Array[String]] $exposed_paths = undef,
   Optional[Hash] $users = undef
